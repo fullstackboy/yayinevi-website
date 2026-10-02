@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hakkımızda — Darül Hidaye</title>
+  <meta name="description" content="Darül Hidaye Yayınevi hakkında: kimiz, ne yayımlıyoruz, nasıl çalışıyoruz.">
+  <meta property="og:title" content="Hakkımızda — Darül Hidaye">
+  <meta property="og:description" content="Darül Hidaye Yayınevi hakkında.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Darül Hidaye</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Ana menü">
+        <a href="index.html">Kitaplar</a>
+        <a href="about.html" aria-current="page">Hakkımızda</a>
+        <a href="contact.html">İletişim</a>
+        <a class="cart-link" href="cart.html">
+          Sepet <span id="cart-count" class="cart-count" hidden>0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <div class="container narrow">
+      <header class="page-header">
+        <h1>Hakkımızda</h1>
+        <p>Az kitap, özenli seçim, sade bir yayıncılık anlayışı.</p>
+      </header>
+
+      <div class="prose">
+        <p>
+          Darül Hidaye, hikmet ve rehberlik ekseninde eserler yayımlayan küçük ölçekli bir yayınevidir.
+          Amacımız; okuyucuya kalabalık bir katalog sunmak değil, anlamlı ve özenle hazırlanmış
+          az sayıda kitabı ulaştırmaktır.
+        </p>
+        <p>
+          Dilimiz sade, tasarımlarımız temkinli, üretimimiz dikkatlidir. Her yeni eser,
+          katalogumuza gerçekten katkı sağlayacaksa yer alır.
+        </p>
+        <p>
+          Siparişler WhatsApp üzerinden alınır. Ödeme ve teslimat detayları iletişime
+          geçtiğinizde netleştirilir.
+        </p>
+      </div>
+
+      <p class="page-actions">
+        <a class="btn btn-primary" href="index.html">Kitapları Gör</a>
+        <a class="btn btn-ghost" href="contact.html">İletişime Geç</a>
+      </p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">Darül Hidaye Yayınevi</p>
+      <p class="footer-copy">© <span id="year"></span> Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

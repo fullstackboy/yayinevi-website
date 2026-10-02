@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sepet — Darül Hidaye</title>
+  <meta name="description" content="Sepetinizi onaylayın ve WhatsApp üzerinden sipariş verin.">
+  <meta property="og:title" content="Sepet — Darül Hidaye">
+  <meta property="og:description" content="Sepetinizi onaylayın ve WhatsApp üzerinden sipariş verin.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Darül Hidaye</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Ana menü">
+        <a href="index.html">Kitaplar</a>
+        <a href="about.html">Hakkımızda</a>
+        <a href="contact.html">İletişim</a>
+        <a class="cart-link" href="cart.html" aria-current="page">
+          Sepet <span id="cart-count" class="cart-count" hidden>0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="page-main">
+    <div class="container narrow-cart">
+      <header class="page-header">
+        <h1>Sepeti Onayla</h1>
+        <p>Sepetinizdeki kitapları kontrol edin; ardından WhatsApp ile sipariş mesajını gönderin.</p>
+      </header>
+
+      <div id="cart-empty" class="state-box" hidden>
+        Sepetiniz boş.
+        <p class="page-actions"><a class="btn btn-ghost" href="index.html">Kitaplara dön</a></p>
+      </div>
+
+      <div id="cart-content" hidden>
+        <ul id="cart-list" class="cart-list"></ul>
+        <div class="cart-summary">
+          <div class="cart-total">
+            <span>Toplam</span>
+            <strong id="cart-total">0 TL</strong>
+          </div>
+          <div class="cart-actions">
+            <a id="cart-whatsapp" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">
+              WhatsApp’tan Sipariş Ver
+            </a>
+            <button id="cart-clear" type="button" class="btn btn-ghost">Sepeti Temizle</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">Darül Hidaye Yayınevi</p>
+      <p class="footer-copy">© <span id="year"></span> Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script src="data/books.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

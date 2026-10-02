@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Darül Hidaye Yayınevi</title>
+  <meta name="description" content="Darül Hidaye Yayınevi — hikmet, tefekkür ve rehberlik odaklı kitaplar. Katalogumuzu keşfedin, WhatsApp üzerinden sipariş verin.">
+  <meta property="og:title" content="Darül Hidaye Yayınevi">
+  <meta property="og:description" content="Hikmet ve rehberlik odaklı kitaplar. Katalogumuzu keşfedin.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="tr_TR">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Darül Hidaye</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menüyü aç">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Ana menü">
+        <a href="index.html" aria-current="page">Kitaplar</a>
+        <a href="about.html">Hakkımızda</a>
+        <a href="contact.html">İletişim</a>
+        <a class="cart-link" href="cart.html">
+          Sepet <span id="cart-count" class="cart-count" hidden>0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="kitaplar" class="books-section" aria-label="Kitap kataloğu">
+      <div class="container">
+        <div id="books-loading" class="state-box" role="status" aria-live="polite">
+          Kitaplar yükleniyor…
+        </div>
+        <div id="books-error" class="state-box state-error" hidden role="alert"></div>
+
+        <div id="books-layout" class="books-layout" hidden>
+          <aside class="category-sidebar" aria-label="Kategoriler">
+            <h2 class="category-title">Kategoriler</h2>
+            <nav id="category-nav" class="category-nav"></nav>
+          </aside>
+          <div id="books-grid" class="books-grid"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-brand">Darül Hidaye Yayınevi</p>
+      <p class="footer-copy">© <span id="year"></span> Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script src="data/books.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/books.js"></script>
+</body>
+</html>
