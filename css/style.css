@@ -1,23 +1,23 @@
-/* Darul Hidaye — white ground, black details */
+/* Darul Hidaye — light ground, warm orange accents */
 
 :root {
-  --bg: #ffffff;
-  --bg-soft: #f5f5f5;
+  --bg: #fbfaf8;
+  --bg-soft: #f3f0eb;
   --surface: #ffffff;
-  --ink: #111111;
-  --ink-muted: #555555;
-  --line: #e5e5e5;
-  --accent: #111111;
-  --accent-hover: #000000;
-  --accent-soft: rgba(17, 17, 17, 0.06);
-  --danger: #7a2e2e;
-  --radius: 4px;
-  --shadow-soft: none;
+  --ink: #1c1917;
+  --ink-muted: #6b6560;
+  --line: #e8e2da;
+  --accent: #e86f2a;
+  --accent-hover: #cf5a1a;
+  --accent-soft: rgba(232, 111, 42, 0.12);
+  --danger: #b42318;
+  --radius: 8px;
+  --shadow-soft: 0 1px 2px rgba(28, 25, 23, 0.04), 0 8px 24px rgba(28, 25, 23, 0.04);
   --font-serif: "Cormorant Garamond", "Times New Roman", serif;
   --font-sans: "Source Sans 3", "Segoe UI", sans-serif;
   --max: 1120px;
   --header-h: 4rem;
-  --ease: 160ms ease;
+  --ease: 180ms ease;
 }
 
 *,
@@ -103,7 +103,8 @@ p {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: #fff;
+  background: rgba(251, 250, 248, 0.92);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--line);
 }
 
@@ -148,7 +149,7 @@ p {
 
 .site-nav a:hover,
 .site-nav a[aria-current="page"] {
-  color: var(--ink);
+  color: var(--accent-hover);
 }
 
 .cart-link {
@@ -165,7 +166,7 @@ p {
   height: 1.25rem;
   padding: 0 0.35rem;
   border-radius: 999px;
-  background: var(--ink);
+  background: var(--accent);
   color: #fff;
   font-size: 0.75rem;
   font-weight: 600;
@@ -225,12 +226,14 @@ p {
 }
 
 .btn-primary {
-  background: var(--ink);
+  background: var(--accent);
   color: #fff;
+  border-color: var(--accent);
 }
 
 .btn-primary:hover {
-  background: #000;
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
   color: #fff;
 }
 
@@ -246,8 +249,9 @@ p {
 }
 
 .btn-ghost:hover {
-  border-color: var(--ink);
-  color: var(--ink);
+  border-color: var(--accent);
+  color: var(--accent-hover);
+  background: var(--accent-soft);
 }
 
 .btn-block {
@@ -326,11 +330,11 @@ p {
 }
 
 .category-btn.is-active {
-  color: var(--ink);
-  border-left-color: var(--ink);
+  color: var(--accent-hover);
+  border-left-color: var(--accent);
   padding-left: 0.65rem;
   font-weight: 600;
-  background: transparent;
+  background: var(--accent-soft);
 }
 
 .books-grid {
@@ -342,15 +346,18 @@ p {
 .book-card {
   display: flex;
   flex-direction: column;
-  background: #fff;
+  background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
-  transition: border-color var(--ease);
+  box-shadow: var(--shadow-soft);
+  transition: border-color var(--ease), box-shadow var(--ease), transform var(--ease);
 }
 
 .book-card:hover {
-  border-color: #111;
+  border-color: #d6cfc6;
+  box-shadow: 0 2px 8px rgba(28, 25, 23, 0.06), 0 12px 28px rgba(28, 25, 23, 0.06);
+  transform: translateY(-2px);
 }
 
 .book-cover {
@@ -544,7 +551,7 @@ p {
 .site-footer {
   border-top: 1px solid var(--line);
   padding: 1.5rem 0;
-  background: #fff;
+  background: var(--bg);
 }
 
 .footer-inner {
@@ -708,9 +715,9 @@ p {
   }
 
   .category-btn.is-active {
-    background: var(--ink);
+    background: var(--accent);
     color: #fff;
-    border-color: var(--ink);
+    border-color: var(--accent);
     padding-left: 0.75rem;
   }
 
