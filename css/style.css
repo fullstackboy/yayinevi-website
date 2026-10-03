@@ -354,7 +354,7 @@ p {
 }
 
 .book-cover {
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 3 / 4;
   background: var(--bg-soft);
   overflow: hidden;
   border-bottom: 1px solid var(--line);
@@ -363,7 +363,8 @@ p {
 .book-cover img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
 }
 
 .book-body {
@@ -448,7 +449,7 @@ p {
 }
 
 .book-detail-cover {
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 3 / 4;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   overflow: hidden;
@@ -458,7 +459,8 @@ p {
 .book-detail-cover img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
 }
 
 .book-detail-info h1 {
@@ -587,7 +589,7 @@ p {
 }
 
 .cart-item-cover {
-  aspect-ratio: 2 / 3;
+  aspect-ratio: 3 / 4;
   border: 1px solid var(--line);
   overflow: hidden;
   background: var(--bg-soft);
@@ -596,7 +598,8 @@ p {
 .cart-item-cover img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  display: block;
 }
 
 .cart-item-info h2 {

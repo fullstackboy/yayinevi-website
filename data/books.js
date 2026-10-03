@@ -23,7 +23,7 @@ window.BOOKS_DATA = [
     "price": 170,
     "currency": "TL",
     "isbn": "978-605-0000-002-8",
-    "cover": "images/books/baki-olan-soz.png",
+    "cover": "images/books/baki-olan-soz.jpg",
     "featured": true
   },
   {
