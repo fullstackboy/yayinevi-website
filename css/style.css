@@ -555,6 +555,11 @@ p {
 }
 
 .footer-inner {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.footer-top {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -572,6 +577,27 @@ p {
   margin: 0;
   color: var(--ink-muted);
   font-size: 0.9rem;
+}
+
+.footer-disclaimer {
+  margin: 0;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--line);
+  color: var(--ink-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  max-width: 42rem;
+}
+
+.demo-notice {
+  margin: 0 0 1.25rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(232, 111, 42, 0.28);
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  color: var(--ink);
+  font-size: 0.92rem;
+  line-height: 1.5;
 }
 
 .narrow-cart {
