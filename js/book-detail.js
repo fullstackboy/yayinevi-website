@@ -60,7 +60,7 @@
           "<li><span>Fiyat</span><strong>" + price + "</strong></li>" +
         "</ul>" +
         '<div class="book-detail-actions">' +
-          '<button type="button" class="btn btn-primary" id="detail-add-cart">Sepete Ekle</button>' +
+          '<button type="button" class="btn btn-primary btn-cart" id="detail-add-cart">Sepete Ekle</button>' +
           '<a class="btn btn-ghost" href="cart.html">Sepete Git</a>' +
           '<a class="btn btn-ghost" href="index.html">Kitaplara Dön</a>' +
         "</div>" +

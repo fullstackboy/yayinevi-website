@@ -15,11 +15,15 @@
     var excerpt = api.escapeHtml(api.truncate(book.description, 140));
     var cover = api.escapeHtml(book.cover);
     var id = api.escapeHtml(book.id);
-    var price = api.escapeHtml(api.formatPrice(book.price, book.currency));
+    var priceValue = api.escapeHtml(String(book.price));
     var pages = api.escapeHtml(String(book.pages));
     var categoryLabel = category
       ? '<p class="book-category">' + category + "</p>"
       : "";
+    var cartIcon =
+      '<svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">' +
+        '<path fill="currentColor" d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zm10 0c-1.1 0-1.99.9-1.99 2S15.9 22 17 22s2-.9 2-2-.9-2-2-2zM7.16 14h9.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49A1 1 0 0 0 21.08 5H5.21L4.27 2H1v2h2l3.6 7.59-1.35 2.44C4.52 15.37 5.48 17 7 17h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12L7.16 14z"/>' +
+      "</svg>";
 
     return (
       '<article class="book-card" data-book-id="' + id + '">' +
@@ -31,13 +35,16 @@
           "<h3>" + title + "</h3>" +
           '<p class="book-author">' + author + "</p>" +
           '<p class="book-excerpt">' + excerpt + "</p>" +
-          '<div class="book-meta">' +
-            "<span>" + pages + " sayfa</span>" +
-            "<strong>" + price + "</strong>" +
-          "</div>" +
-          '<div class="book-actions">' +
-            '<a class="btn btn-ghost btn-block" href="book.html?id=' + id + '">Detayları Gör</a>' +
-            '<button type="button" class="btn btn-primary btn-block js-add-cart" data-id="' + id + '">Sepete Ekle</button>' +
+          '<p class="book-pages">' + pages + " sayfa</p>" +
+          '<a class="book-detail-link" href="book.html?id=' + id + '">Detayları Gör →</a>' +
+          '<div class="book-footer">' +
+            '<div class="book-price">' +
+              '<strong class="price-value">' + priceValue + " TL</strong>" +
+            "</div>" +
+            '<button type="button" class="btn btn-primary btn-cart js-add-cart" data-id="' + id + '">' +
+              cartIcon +
+              '<span class="btn-label">Sepete Ekle</span>' +
+            "</button>" +
           "</div>" +
         "</div>" +
       "</article>"
@@ -103,11 +110,20 @@
         var book = api.findBookById(allBooks, id);
         if (!book) return;
         api.addToCart(book);
-        var original = btn.textContent;
-        btn.textContent = "Eklendi";
+        var label = btn.querySelector(".btn-label");
+        var original = label ? label.textContent : btn.textContent;
+        if (label) {
+          label.textContent = "Eklendi";
+        } else {
+          btn.textContent = "Eklendi";
+        }
         btn.disabled = true;
         setTimeout(function () {
-          btn.textContent = original;
+          if (label) {
+            label.textContent = original;
+          } else {
+            btn.textContent = original;
+          }
           btn.disabled = false;
         }, 900);
       });
