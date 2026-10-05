@@ -60,7 +60,10 @@
           "<li><span>Fiyat</span><strong>" + price + "</strong></li>" +
         "</ul>" +
         '<div class="book-detail-actions">' +
-          '<button type="button" class="btn btn-primary" id="detail-add-cart">Sepete Ekle</button>' +
+          '<button type="button" class="btn btn-primary" id="detail-add-cart">' +
+            '<svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>' +
+            '<span id="detail-add-cart-label">Sepete Ekle</span>' +
+          "</button>" +
           '<a class="btn btn-ghost" href="cart.html">Sepete Git</a>' +
           '<a class="btn btn-ghost" href="index.html">Kitaplara Dön</a>' +
         "</div>" +
@@ -71,10 +74,10 @@
 
     document.getElementById("detail-add-cart").addEventListener("click", function () {
       api.addToCart(currentBook);
-      var btn = document.getElementById("detail-add-cart");
-      btn.textContent = "Eklendi";
+      var label = document.getElementById("detail-add-cart-label");
+      label.textContent = "Eklendi";
       setTimeout(function () {
-        btn.textContent = "Sepete Ekle";
+        label.textContent = "Sepete Ekle";
       }, 900);
     });
   }

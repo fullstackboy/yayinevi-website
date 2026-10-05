@@ -37,7 +37,10 @@
           "</div>" +
           '<div class="book-actions">' +
             '<a class="btn btn-ghost btn-block" href="book.html?id=' + id + '">Detayları Gör</a>' +
-            '<button type="button" class="btn btn-primary btn-block js-add-cart" data-id="' + id + '">Sepete Ekle</button>' +
+            '<button type="button" class="btn btn-primary btn-block js-add-cart" data-id="' + id + '">' +
+              '<svg class="cart-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>' +
+              '<span class="js-add-cart-label">Sepete Ekle</span>' +
+            "</button>" +
           "</div>" +
         "</div>" +
       "</article>"
@@ -103,11 +106,12 @@
         var book = api.findBookById(allBooks, id);
         if (!book) return;
         api.addToCart(book);
-        var original = btn.textContent;
-        btn.textContent = "Eklendi";
+        var label = btn.querySelector(".js-add-cart-label");
+        var original = label.textContent;
+        label.textContent = "Eklendi";
         btn.disabled = true;
         setTimeout(function () {
-          btn.textContent = original;
+          label.textContent = original;
           btn.disabled = false;
         }, 900);
       });
