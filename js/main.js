@@ -163,6 +163,14 @@
     });
   }
 
+  function initSocialLinks() {
+    document.querySelectorAll(".footer-socials a[href='dummy']").forEach(function (link) {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+      });
+    });
+  }
+
   function initYear() {
     var el = document.getElementById("year");
     if (el) el.textContent = String(new Date().getFullYear());
@@ -170,6 +178,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     initNav();
+    initSocialLinks();
     initYear();
     updateCartCount();
   });
