@@ -40,9 +40,7 @@
             '<p class="cart-item-author">' + api.escapeHtml(item.author || "") + "</p>" +
             '<p class="cart-item-price">' + api.escapeHtml(api.formatPrice(lineTotal, item.currency)) + "</p>" +
             '<div class="cart-item-controls">' +
-              '<label>Adet ' +
-                '<input class="cart-qty" type="number" min="1" value="' + qty + '" data-id="' + api.escapeHtml(item.id) + '">' +
-              "</label>" +
+              '<input class="cart-qty" type="number" min="1" value="' + qty + '" data-id="' + api.escapeHtml(item.id) + '" aria-label="Ürün adedi">' +
               '<button type="button" class="btn btn-ghost cart-remove" data-id="' + api.escapeHtml(item.id) + '"' +
                 ' aria-label="Sepetten kaldır: ' + api.escapeHtml(item.title) + '" title="Sepetten kaldır">' +
                 '<svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" focusable="false">' +

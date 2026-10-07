@@ -64,11 +64,14 @@
           "<li><span>Fiyat</span><strong>" + price + "</strong></li>" +
         "</ul>" +
         '<div class="book-detail-actions">' +
+          '<a class="btn btn-ghost book-return-link" href="index.html">' +
+            '<svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" focusable="false"><path d="m15 18-6-6 6-6M9 12h12"/></svg>' +
+            '<span>Kitaplara Dön</span>' +
+          "</a>" +
           '<button type="button" class="btn btn-primary btn-cart" id="detail-add-cart">' +
             cartIcon +
             '<span class="btn-label">Sepete Ekle</span>' +
           "</button>" +
-          '<a class="btn btn-ghost" href="index.html">Kitaplara Dön</a>' +
         "</div>" +
       "</div>";
 
