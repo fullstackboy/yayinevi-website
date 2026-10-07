@@ -43,7 +43,12 @@
               '<label>Adet ' +
                 '<input class="cart-qty" type="number" min="1" value="' + qty + '" data-id="' + api.escapeHtml(item.id) + '">' +
               "</label>" +
-              '<button type="button" class="btn btn-ghost cart-remove" data-id="' + api.escapeHtml(item.id) + '">Kaldır</button>' +
+              '<button type="button" class="btn btn-ghost cart-remove" data-id="' + api.escapeHtml(item.id) + '"' +
+                ' aria-label="Sepetten kaldır: ' + api.escapeHtml(item.title) + '" title="Sepetten kaldır">' +
+                '<svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" focusable="false">' +
+                  '<path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6m5 4v7m4-7v7"/>' +
+                "</svg>" +
+              "</button>" +
             "</div>" +
           "</div>" +
         "</li>"
