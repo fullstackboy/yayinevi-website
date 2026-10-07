@@ -68,7 +68,6 @@
             cartIcon +
             '<span class="btn-label">Sepete Ekle</span>' +
           "</button>" +
-          '<a class="btn btn-ghost" href="cart.html">Sepete Git</a>' +
           '<a class="btn btn-ghost" href="index.html">Kitaplara Dön</a>' +
         "</div>" +
       "</div>";

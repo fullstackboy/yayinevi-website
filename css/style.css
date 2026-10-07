@@ -201,6 +201,16 @@ p {
   line-height: 1;
 }
 
+.cart-remove {
+  padding: 0.5rem;
+  border-color: transparent;
+}
+
+.cart-remove:hover {
+  background: var(--bg-soft);
+  border-color: transparent;
+}
+
 .nav-toggle {
   display: none;
   flex-direction: column;
