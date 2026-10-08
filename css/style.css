@@ -300,14 +300,6 @@ p {
   transform: none;
 }
 
-.book-detail-actions .btn-cart {
-  border-color: var(--line);
-}
-
-.book-detail-actions .btn-cart:hover {
-  border-color: var(--line);
-}
-
 .btn.cart-remove {
   padding: 0.5rem;
   border: 0;
@@ -423,6 +415,7 @@ p {
   box-shadow: var(--shadow);
   transition: all var(--ease);
   animation: fadeIn 0.6s ease-out;
+  cursor: pointer;
 }
 
 .book-card:hover {
@@ -495,18 +488,13 @@ p {
   color: var(--ink-muted);
 }
 
-.book-detail-link {
-  margin-top: 0.35rem;
+.book-title-link {
   color: var(--primary);
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: color var(--ease), padding-left var(--ease);
 }
 
-.book-detail-link:hover {
+.book-title-link:hover {
   color: var(--primary-dark);
-  padding-left: 4px;
 }
 
 .book-footer {
@@ -902,6 +890,29 @@ p {
   padding-top: 0.5rem;
 }
 
+.cart-clear {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--ink-muted);
+  font: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.cart-clear:hover {
+  background: transparent;
+  color: var(--ink-muted);
+}
+
+.cart-clear-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
 .cart-total {
   display: flex;
   justify-content: space-between;
@@ -935,7 +946,7 @@ p {
 
 @media (min-width: 560px) {
   .cart-actions {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
