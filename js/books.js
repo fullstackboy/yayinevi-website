@@ -26,7 +26,7 @@
       "</svg>";
 
     return (
-      '<article class="book-card" data-book-id="' + id + '">' +
+      '<article class="book-card" data-book-id="' + id + '" tabindex="0" aria-label="Kitap detayını görüntüle: ' + title + '">' +
         '<div class="book-cover">' +
           '<img src="' + cover + '" alt="' + title + ' kapak görseli" width="400" height="600" loading="lazy" decoding="async">' +
         "</div>" +
@@ -131,9 +131,20 @@
 
   function bindBookCards(root) {
     root.querySelectorAll(".book-card").forEach(function (card) {
-      card.addEventListener("click", function (event) {
+      function openBook(event) {
         if (event.target.closest("a, button")) return;
         window.location.href = "book.html?id=" + encodeURIComponent(card.getAttribute("data-book-id"));
+      }
+
+      card.addEventListener("click", function (event) {
+        openBook(event);
+      });
+
+      card.addEventListener("keydown", function (event) {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        if (event.target !== card) return;
+        event.preventDefault();
+        openBook(event);
       });
     });
   }
