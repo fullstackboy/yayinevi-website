@@ -135,6 +135,20 @@ p {
   transition: color var(--ease);
 }
 
+.brand-with-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.brand-logo {
+  display: block;
+  width: 3.3rem;
+  height: 2.5rem;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
 .brand:hover {
   color: var(--primary-dark);
   opacity: 1;
@@ -1006,6 +1020,11 @@ p {
     font-size: 1.15rem;
   }
 
+  .brand-logo {
+    width: 2.65rem;
+    height: 2rem;
+  }
+
   .nav-toggle {
     display: flex;
   }
@@ -1069,7 +1088,7 @@ p {
   }
 
   .book-detail-actions {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 
   .book-detail-actions .btn {
