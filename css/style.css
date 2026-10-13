@@ -491,12 +491,6 @@ p {
   overflow: hidden;
 }
 
-.book-pages {
-  margin: 0;
-  font-size: 0.9rem;
-  color: var(--ink-muted);
-}
-
 .book-title-link {
   color: var(--primary);
   text-decoration: none;

@@ -16,7 +16,6 @@
     var cover = api.escapeHtml(book.cover);
     var id = api.escapeHtml(book.id);
     var priceValue = api.escapeHtml(String(book.price));
-    var pages = api.escapeHtml(String(book.pages));
     var categoryLabel = category
       ? '<p class="book-category">' + category + "</p>"
       : "";
@@ -35,7 +34,6 @@
           '<h3><a class="book-title-link" href="book.html?id=' + id + '">' + title + "</a></h3>" +
           '<p class="book-author">' + author + "</p>" +
           '<p class="book-excerpt">' + excerpt + "</p>" +
-          '<p class="book-pages">' + pages + " sayfa</p>" +
           '<div class="book-footer">' +
             '<div class="book-price">' +
               '<strong class="price-value">' + priceValue + " TL</strong>" +
