@@ -432,9 +432,11 @@ p {
   cursor: pointer;
 }
 
-.book-card:hover {
-  border-color: var(--primary-light);
-  box-shadow: var(--shadow-lg);
+@media (hover: hover) and (pointer: fine) {
+  .book-card:hover {
+    border-color: var(--primary-light);
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 .book-card:focus-visible {
