@@ -9,7 +9,7 @@ window.BOOKS_DATA = [
     "pages": 119,
     "price": 150,
     "currency": "TL",
-    "isbn": "978-605-0000-001-1",
+    "isbn": "-",
     "cover": "images/books/hanif-ol.png",
     "featured": true
   },
@@ -22,7 +22,7 @@ window.BOOKS_DATA = [
     "pages": 160,
     "price": 170,
     "currency": "TL",
-    "isbn": "978-605-0000-002-8",
+    "isbn": "-",
     "cover": "images/books/baki-ol-new.png",
     "featured": true
   },
@@ -35,7 +35,7 @@ window.BOOKS_DATA = [
     "pages": 144,
     "price": 160,
     "currency": "TL",
-    "isbn": "978-605-0000-003-5",
+    "isbn": "-",
     "cover": "images/books/kadin-esaslar.png",
     "featured": true
   },
@@ -48,8 +48,21 @@ window.BOOKS_DATA = [
     "pages": 220,
     "price": 200,
     "currency": "TL",
-    "isbn": "978-605-0000-004-2",
-    "cover": "images/books/ehli-sunnet-imami.jpg",
+    "isbn": "-",
+    "cover": "images/books/ahmed-bin-hanbel.png",
+    "featured": false
+  },
+  {
+    "id": "ahkam-aayetleri-tefsir",
+    "title": "Ahkâm Ayetleri Tefsiri",
+    "author": "Şeyh Abdülaziz b. Merzûk et-Tarîfî",
+    "category": "Tefsir",
+    "description": "Selef âlimleri Kur’ân üzerinde tedebbürü ve okuyuşta yavaşlığı (teennî) teşvik ederlerdi; zira bununla Kur’ân’daki anlamların, özellikle de hükümlere dair delillerin keşfi hedeflenirdi. Bazı insanlar zanneder ki, Kur’ân’daki hükümlerin delilleri ve onlara dair karineler (bağlamlar) tamamen toplanmış ve kayda geçirilmiştir. Bu, hatalı bir zandır. Kayda geçirilmiş ve sabit olan, dinin hükümleridir. Vahyin kesilmesinden sonra dinde herhangi bir yenilik söz konusu değildir. Ancak vahiyden hüküm çıkarma yolları tükenmemiştir. İbn Mes‘ûd (radıyallahu anh) bu konuda şöyle demiştir: “İlim istiyorsanız Kur’ân’ı derinlemesine araştırın. Zira onda öncekilerin ve sonrakilerin bilgisi vardır.” Yani “Kur’ân’ı derinlemesine araştırın, anlamlarını ve tefsirinidüşünün.” anlamındadır. İmam Şâfiî’nin talebesi Rebî‘den şu rivayet edilmiştir: “İmam Şâfiî’nin yanına ne zaman girsem, önünde Mushaf açık olurdu; Kur’ân’daki hükümlerin izini sürerdi.” İmamlar, Kur’ân’da delil açıkça yer alırken, ondan aşağı derecedeki kaynaklarla istidlal edilmesini bir eksiklik olarak görürlerdi. Rasûlullah(sallallahu aleyhi ve sellem) şöyle buyurmuştur: “Onlar Kur’ân ehli, Allah ehli ve Allah’ın has kullarıdır.”",
+    "pages": 220,
+    "price": 0,
+    "currency": "TL",
+    "isbn": "-",
+    "cover": "images/books/ahkam-ayetleri.png",
     "featured": false
   }
 ];
