@@ -10,7 +10,7 @@ window.BOOKS_DATA = [
     "price": 150,
     "currency": "TL",
     "isbn": "978-605-0000-001-1",
-    "cover": "images/books/hanif-ol.jpg",
+    "cover": "images/books/hanif-ol.png",
     "featured": true
   },
   {
@@ -23,7 +23,7 @@ window.BOOKS_DATA = [
     "price": 170,
     "currency": "TL",
     "isbn": "978-605-0000-002-8",
-    "cover": "images/books/baki-olan-soz.jpg",
+    "cover": "images/books/baki-ol-new.png",
     "featured": true
   },
   {
@@ -36,7 +36,7 @@ window.BOOKS_DATA = [
     "price": 160,
     "currency": "TL",
     "isbn": "978-605-0000-003-5",
-    "cover": "images/books/mumin-kadinin-esaslari.jpg",
+    "cover": "images/books/kadin-esaslar.png",
     "featured": true
   },
   {
