@@ -200,6 +200,19 @@ p {
   gap: 0.4rem;
 }
 
+.header-cart {
+  position: relative;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.header-cart:hover,
+.header-cart[aria-current="page"] {
+  color: var(--primary);
+}
+
 .cart-count {
   display: inline-flex;
   align-items: center;
@@ -219,6 +232,7 @@ p {
   display: none;
   flex-direction: column;
   justify-content: center;
+  flex: 0 0 auto;
   gap: 5px;
   width: 2.5rem;
   height: 2.5rem;
@@ -1029,6 +1043,19 @@ p {
 
   .nav-toggle {
     display: flex;
+  }
+
+  .header-cart {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+
+  .header-cart .cart-count {
+    position: absolute;
+    top: -0.2rem;
+    right: -0.2rem;
   }
 
   .site-nav {
