@@ -25,15 +25,15 @@
       "</svg>";
 
     return (
-      '<article class="book-card" data-book-id="' + id + '" tabindex="0" aria-label="Kitap detayını görüntüle: ' + title + '">' +
-        '<div class="book-cover">' +
+      '<article class="book-card">' +
+        '<a class="book-cover book-cover-link" href="book.html?id=' + id + '" aria-label="' + title + ' kitabının detaylarını görüntüle">' +
           '<img src="' + cover + '" alt="' + title + ' kapak görseli" width="400" height="600" loading="lazy" decoding="async">' +
-        "</div>" +
+        "</a>" +
         '<div class="book-body">' +
           categoryLabel +
           '<h3><a class="book-title-link" href="book.html?id=' + id + '">' + title + "</a></h3>" +
           '<p class="book-author">' + author + "</p>" +
-          '<p class="book-excerpt">' + excerpt + "</p>" +
+          '<a class="book-excerpt-link" href="book.html?id=' + id + '"><p class="book-excerpt">' + excerpt + "</p></a>" +
           '<div class="book-footer">' +
             '<div class="book-price">' +
               '<strong class="price-value">' + priceValue + " TL</strong>" +
@@ -127,26 +127,6 @@
     });
   }
 
-  function bindBookCards(root) {
-    root.querySelectorAll(".book-card").forEach(function (card) {
-      function openBook(event) {
-        if (event.target.closest("a, button")) return;
-        window.location.href = "book.html?id=" + encodeURIComponent(card.getAttribute("data-book-id"));
-      }
-
-      card.addEventListener("click", function (event) {
-        openBook(event);
-      });
-
-      card.addEventListener("keydown", function (event) {
-        if (event.key !== "Enter" && event.key !== " ") return;
-        if (event.target !== card) return;
-        event.preventDefault();
-        openBook(event);
-      });
-    });
-  }
-
   function renderBooks(books) {
     var grid = document.getElementById("books-grid");
     var errorEl = document.getElementById("books-error");
@@ -163,7 +143,6 @@
     }
 
     grid.innerHTML = books.map(createBookCard).join("");
-    bindBookCards(grid);
     bindAddToCart(grid);
   }
 
