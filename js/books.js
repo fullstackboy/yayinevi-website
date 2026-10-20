@@ -13,7 +13,7 @@
     var author = api.escapeHtml(book.author);
     var category = api.escapeHtml(book.category || "");
     var excerpt = api.escapeHtml(api.truncate(book.description, 140));
-    var cover = api.escapeHtml(book.cover);
+    var cover = api.escapeHtml(book.cardCover || book.cover);
     var id = api.escapeHtml(book.id);
     var priceValue = api.escapeHtml(String(book.price));
     var categoryLabel = category

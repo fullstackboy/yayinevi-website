@@ -11,6 +11,7 @@ window.BOOKS_DATA = [
     "currency": "TL",
     "isbn": "-",
     "cover": "images/books/hanif-ol.png",
+    "cardCover": "images/books/hanif-ol-card.png",
     "featured": true
   },
   {
@@ -23,7 +24,8 @@ window.BOOKS_DATA = [
     "price": 200,
     "currency": "TL",
     "isbn": "-",
-    "cover": "images/books/baki-ol-new.png",
+    "cover": "images/books/baki-soz.png",
+    "cardCover": "images/books/baki-soz-card.png",
     "featured": true
   },
   {
@@ -37,6 +39,7 @@ window.BOOKS_DATA = [
     "currency": "TL",
     "isbn": "-",
     "cover": "images/books/kadin-esaslar.png",
+    "cardCover": "images/books/kadin-esaslar-card.png",
     "featured": true
   },
   {
@@ -50,6 +53,7 @@ window.BOOKS_DATA = [
     "currency": "TL",
     "isbn": "-",
     "cover": "images/books/ahmed-bin-hanbel.png",
+    "cardCover": "images/books/ahmed-bin-hanbel-card.png",
     "featured": false
   },
   {
@@ -63,6 +67,7 @@ window.BOOKS_DATA = [
     "currency": "TL",
     "isbn": "-",
     "cover": "images/books/ahkam-ayetleri.png",
+    "cardCover": "images/books/ahkam-ayetleri-card.png",
     "featured": false
   }
 ];
