@@ -814,27 +814,6 @@ p {
   font-size: 0.9rem;
 }
 
-.footer-disclaimer {
-  margin: 0;
-  padding-top: 0.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.82rem;
-  line-height: 1.5;
-  max-width: 42rem;
-}
-
-.demo-notice {
-  margin: 0 0 1.25rem;
-  padding: 0.85rem 1.1rem;
-  border: 1px solid rgba(212, 175, 55, 0.35);
-  border-radius: var(--radius);
-  background: var(--accent-soft);
-  color: var(--ink);
-  font-size: 0.92rem;
-  line-height: 1.5;
-}
-
 /* Cart */
 .narrow-cart {
   width: min(100% - 2.5rem, 40rem);

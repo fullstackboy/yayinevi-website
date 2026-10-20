@@ -5,7 +5,7 @@
   "use strict";
 
   var CONFIG = {
-    WHATSAPP_NUMBER: "905XXXXXXXXX",
+    WHATSAPP_NUMBER: "905413021656",
     CART_KEY: "darulHidayeCart"
   };
 
