@@ -14,6 +14,12 @@
 
   function updateDocumentMeta(book) {
     document.title = book.title + " — Darül Hidaye";
+    var canonicalUrl = new URL("book.html", window.location.origin);
+    canonicalUrl.searchParams.set("id", book.id);
+    var canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.href = canonicalUrl.href;
+    }
 
     var desc = document.querySelector('meta[name="description"]');
     if (desc) {
@@ -29,6 +35,32 @@
     if (ogDesc) {
       ogDesc.setAttribute("content", api.truncate(book.description, 155));
     }
+
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) {
+      ogUrl.setAttribute("content", canonicalUrl.href);
+    }
+
+    var structuredData = {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": book.title,
+      "author": {
+        "@type": "Person",
+        "name": book.author
+      },
+      "description": book.description,
+      "image": new URL(book.cover, window.location.href).href,
+      "inLanguage": "tr",
+      "url": canonicalUrl.href
+    };
+    if (book.isbn && book.isbn !== "-") {
+      structuredData.isbn = book.isbn;
+    }
+    var jsonLd = document.createElement("script");
+    jsonLd.type = "application/ld+json";
+    jsonLd.textContent = JSON.stringify(structuredData);
+    document.head.appendChild(jsonLd);
   }
 
   function renderBook(book) {
@@ -118,6 +150,10 @@
         hideLoading();
         var book = api.findBookById(books, id);
         if (!book) {
+          var robots = document.createElement("meta");
+          robots.name = "robots";
+          robots.content = "noindex,follow";
+          document.head.appendChild(robots);
           showError("Aradığınız kitap bulunamadı.");
           return;
         }
