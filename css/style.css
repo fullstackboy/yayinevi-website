@@ -421,10 +421,9 @@ p {
 
 .category-btn.is-active {
   color: var(--primary);
-  border-left-color: var(--accent);
+  border-left-color: #000;
   padding-left: 0.65rem;
   font-weight: 600;
-  background: var(--accent-soft);
 }
 
 .books-grid {
@@ -1001,9 +1000,8 @@ p {
   }
 
   .category-btn.is-active {
-    background: var(--primary);
-    color: #fff;
-    border-color: var(--primary);
+    color: var(--primary);
+    border-color: #000;
     padding-left: 0.85rem;
   }
 
