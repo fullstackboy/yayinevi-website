@@ -8,6 +8,12 @@ Bu yapı sayesinde HTML dosyasını doğrudan açsanız da (`file://`) kitaplar 
 
 SEO dosyaları (`robots.txt`, `sitemap.xml` ve `favicon.svg`) sitenin kök dizininde sunulmalıdır. Yeni bir kitap eklendiğinde, Google'ın ürün detay sayfasını keşfedebilmesi için `sitemap.xml` dosyasına `book.html?id=<kitap-id>` adresini de ekleyin. Sepet sayfası arama sonuçlarına dahil edilmez.
 
+Ana sayfa katalogu, Google ve JavaScript çalıştırmayan istemcilerin kitapları doğrudan HTML'de görebilmesi için `data/books.js` verilerinden üretilir. Kitap ekleyip düzenledikten sonra şu komutu çalıştırın:
+
+```bash
+python3 scripts/generate-index.py
+```
+
 Yayına aldıktan sonra Google Search Console'da `https://darulhidayeyayinlari.com/` alan adını doğrulayın ve `https://darulhidayeyayinlari.com/sitemap.xml` site haritasını gönderin.
 
 ## Açma
