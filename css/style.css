@@ -436,8 +436,8 @@ p {
   display: flex;
   flex-direction: column;
   background: var(--surface);
-  border: 2px solid #e1e1e1;
-  border-radius: 1.5rem;
+  border: 1px solid #e1e1e1;
+  border-radius: 1rem;
   overflow: hidden;
   padding: 0.75rem;
   box-shadow: none;
@@ -977,7 +977,7 @@ p {
   .category-sidebar {
     position: static;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 1px var(--line);
   }
 
   .category-title {
